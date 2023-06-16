@@ -1,0 +1,46 @@
+% git 
+
+# Set global git user name
+git config --global user.name <name>
+
+# Set global git user email
+git config --global user.email <email>
+
+# Show a list of global parameters  
+git config --list --show-origin
+
+# Initializes a git repository
+git init
+
+# Add file contents to the index
+git add <file>
+
+# Show various types of objects (trees, commits, blobs  and tags)
+git show <options> <object...>
+
+# Switch branches or restore working tree files
+git checkout 
+
+# Restore a past state of soft way
+git checkout <commit> <file or without file>
+
+# Return to the past hard, soft or bouth of them
+git reset <commit> --hard, --soft o --mixed
+
+# Delete files from git without delete it's VCS history
+git rm 
+
+# Delete files from our local repository and staging area, but hard drive keeps them 
+git rm --cached
+
+# Delete files from git and hard drive
+git rm --force
+
+# Remove files from staging area, but not to delete them. Just so the latest changes doesn't send to the last commit, unless we change our minds and include them again. 
+git reset HEAD
+
+# Rename the last commit (it is the HEAD)
+git commit --amend
+
+# Delete the last commit, without changes. Fix and commit again. 
+git reset HEAD~1 --soft
