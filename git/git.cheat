@@ -36,13 +36,13 @@ git rm --cached
 # Delete files from git and hard drive
 git rm --force
 
-# Removes files from staging area, but not to delete them. Just so the latest changes doesn't send to the last commit, unless we change our minds and include them again. 
+# Removes files from staging area, but not to delete them. Just so the latest changes doesn't send to the last commit, unless we change our minds and include them again
 git reset HEAD
 
 # Renames the last commit (it is the HEAD)
 git commit --amend
 
-# Deletes the last commit, without changes. Fix and commit again. 
+# Deletes the last commit, without changes. Fix and commit again
 git reset HEAD~1 --soft
 
 # Shows id and the title commit
@@ -51,16 +51,40 @@ git log --online
 # Shows where it is the head point in the log.
 git log --decorate
 
-# Shows the number of lines that were changed.
+# Shows the number of lines that were changed
 git log --stat
 
-# Shows the number of lines that were changed and shows the changes on content.
+# Shows the number of lines that were changed and shows the changes on content
 git log -p
 
 # git shortlog
-Identifies the commit made by the user. It shows the user and the commit titles.
+Identifies the commit made by the user. It shows the user and the commit titles
 
 # A nice view of log
 git log --graph --oneline
 
-# 
+# Pretty format
+git log --pretty="format:%H"
+
+# Limits the number of commits by 3
+git log -3
+
+# Search commits by date after that
+git log --after=<date>
+
+# Search commits by date after that
+git log --before=<date>
+
+# Search commits by date after today
+git log --after=<today>
+
+# Search commits by author name
+git log --author=<Name author>
+
+# Search commits that match what is written
+git log --grep=<text>
+
+# Search commits that match what is written with case sensitive
+git log --grep=<text> -i
+
+
