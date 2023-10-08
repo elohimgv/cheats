@@ -1,46 +1,58 @@
 % git 
 
+# Initializes a git repository
+git init
+
 # Set global git user name
-git config --global user.name <name>
+git config --global user.<name>
+
+$ name: Pablo
 
 # Set global git user email
-git config --global user.email <email>
+git config --global user.<email>
+
+$ email: elo@gmail.com
 
 # Shows a list of global parameters  
 git config --list --show-origin
 
-# Initializes a git repository
-git init
-
 # Add file contents to the index
 git add <file>
+
+$ file: index.html
 
 # Shows various types of objects (trees, commits, blobs  and tags)
 git show <options> <object...>
 
+$ object: 0462a01a
+
 # Switch branches or restore working tree files
-git checkout 
+git checkout <branch>
+
+$ branch: prototype
 
 # Restore a past state of soft way
 git checkout <commit> <file or without file>
 
-# Return to the past hard, soft or bouth of them
+$ commit: 0462a01a
+
+# Return to the past hard, soft or both
 git reset <commit> --hard, --soft o --mixed
 
 # Delete files from git without delete it's VCS history
-git rm 
+git rm <file>
 
 # Delete files from our local repository and staging area, but hard drive keeps them 
-git rm --cached
+git rm --cached <file>
 
 # Delete files from git and hard drive
-git rm --force
+git rm --force <file>
+
+# Renames the last commit (it is the HEAD)
+git <commit> --amend
 
 # Removes files from staging area, but not to delete them. Just so the latest changes doesn't send to the last commit, unless we change our minds and include them again
 git reset HEAD
-
-# Renames the last commit (it is the HEAD)
-git commit --amend
 
 # Deletes the last commit, without changes. Fix and commit again
 git reset HEAD~1 --soft
@@ -57,8 +69,8 @@ git log --stat
 # Shows the number of lines that were changed and shows the changes on content
 git log -p
 
-# git shortlog
-Identifies the commit made by the user. It shows the user and the commit titles
+# Identifies the commit made by the user. It shows the user and the commit titles
+git shortlog
 
 # A nice view of log
 git log --graph --oneline
@@ -66,8 +78,10 @@ git log --graph --oneline
 # Pretty format
 git log --pretty="format:%H"
 
-# Limits the number of commits by 3
-git log -3
+# Limits the number of commits
+git log -<number>
+
+$ number: 3
 
 # Search commits by date after that
 git log --after=<date>
@@ -87,4 +101,49 @@ git log --grep=<text>
 # Search commits that match what is written with case sensitive
 git log --grep=<text> -i
 
+# Search the commits from a specific file
+git log index.html
+
+# Save the logs on a file.txt
+git log > log.txt
+
+# For where there isn´t commits in commun
+git pull origin main --allow-unrelated-histories
+
+# For create a tag
+git tag -a v0.1 -m <menssge>
+
+# To know at which hash or what commit is connected the tag
+git show-ref --tags
+
+# To send tags to github
+git push origin --tags
+
+# To delete the tag on my computer
+git tag -d <nametag>
+
+; When review the tag on Github, we found the isn't delete. Why is that? Because it doesn't delete automatically.
+; The tag on Github it can be utilised how 'release'. It is somenthing that can be categorize, to say what something is ready 
+
+# To delete the tag that was not deleted automatically on Github
+git push origin :refs/tags/<nametag>
+
+; Internal sintaxis that delete those reference there on the origin connected with our references from where deleted the tag
+
+# It shows which branches exist and which it's has been his history 
+git show-branch
+
+# The same as git show-branch but with more data
+git show-branch --all
+
+# From a visual manner show the history of branches
+gitk
+
+# It tells me how many branches are
+git branch
+
+# To create branches
+git branches <name>
+
+; It can has branches that never send to Github or branches that constantly send to Github
 
