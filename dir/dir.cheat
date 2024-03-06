@@ -1,1 +1,27 @@
 % dir
+
+# Print the current working directory
+pwd
+
+# Make directories 
+mkdir
+
+# Change the directory with the name dir1
+cd <dir1>
+
+$ dir1: cooking
+
+# Change two directories previous to the current
+cd ../..
+
+# Change the directory to the user home dir
+cd 
+
+# Show files and directories
+ls
+
+# Show every file and directory nested into the route to any level deep
+tree /path
+
+# Show every file and directory nested into the current route two levels deep
+tree -L 2
