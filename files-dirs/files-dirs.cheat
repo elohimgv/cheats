@@ -1,1 +1,43 @@
 % files-dirs
+
+# Make a new file named newFile
+touch <newFile>
+
+$ newFile: spoon
+
+# Make a new file with some string
+echo > <newFile> "Hello"
+
+$ newFile: spoon
+
+# Show the features of my file
+file <my_file>
+
+$ my_file: spoon
+
+# Copy the file 'file1' to the route /destiny
+cp <file1> /<destiny>
+
+# Copy the directory dir1 and its content to a new named dir1_cp
+cp -r <dir1> <dir1_cp>
+
+# Move the file file1 to the route /destiny
+mv <file1> /<destiny>
+
+# Rename the file1 file to name ok_file
+mv <file1> <ok_file>
+
+# Delete the file file1
+rm <file1>
+
+# Delete the directory dir1 and its content interactively
+rm -ri <dir1>
+
+# Delete the directory dir1 and its content with force
+rm -rf <dir1>
+
+# Make a symbolic link to the file
+ln -s <file> <link_name>
+
+# Open the file with the default program
+xdg-open <filename>
