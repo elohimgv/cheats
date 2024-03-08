@@ -1,1 +1,16 @@
 % help
+
+# Show the user manual of command
+man <command>
+
+# Show help to the command (only works if the shell is Bash)
+help <command>
+
+# Show the route from where it finds the executable of the command
+which <command>
+
+# Show briefly the function of the command
+whatis <command>
+
+# Create an alias for the command
+alias <aliasname>="<command>"
