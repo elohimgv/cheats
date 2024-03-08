@@ -1,1 +1,22 @@
 % permissions
+
+# Change the permissions from file to 755
+chmod 755 <file>
+
+# Remove read permission from the file
+chmod u-r <file>
+
+# Add read, write, and execute permission to the user and read-only permissions to the group and others
+chmod u=rwx, go=r <file>
+
+# Show te user ID
+id
+
+# Show the user name logged in
+whoami
+
+# Change the user
+su <username>
+
+# Run a command as superuser
+sudo <command>
