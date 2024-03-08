@@ -1,1 +1,19 @@
 % text-files
+
+# Show the first 10 lines of text from the file file.txt
+head <file.txt>
+
+# Show the first 20 lines of text from the file file.txt
+head -n 20 <file.txt>
+
+# Show the last 10 lines of text from the file file.txt
+tail <file.txt>
+
+# Show the last 20 lines of text from the file file.txt
+tail -n 20 <file.txt>
+
+# Explore the content of file with paging
+less <file.txt>
+
+# Concatenate the content of file1 and file2 to the terminal output
+cat <file1> <file2>
