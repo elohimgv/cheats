@@ -1,1 +1,16 @@
 % environment-vars
+
+# Print the current environment vars
+env
+
+# Print the environment variable VAR
+echo $VAR
+
+# Var where there are the routes of executables
+$PATH
+
+# User home directory
+$HOME
+
+# Assign the variable $VAR with the value val
+export $VAR=val
