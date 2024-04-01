@@ -1,1 +1,13 @@
+% find
 
+# Search on the path and with a file name
+find <path> -name <file_name>
+
+# Search the file with the name diary on the working directory
+find . -name diary
+
+# Search with regular expressions into a file or terminal output
+grep <regex> file
+
+# Search the word hola ignored lowercase and uppercase
+grep -i hola mensaje.txt
