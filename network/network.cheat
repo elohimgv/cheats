@@ -1,1 +1,10 @@
 % network
+
+# Show info of network
+ifconfig
+
+# Check the availability of the resource
+ping <ip_domain>
+
+# Checks a resource either by IP address or domain and displays it in the terminal
+curl <ip_domain>
