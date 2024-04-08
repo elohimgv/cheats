@@ -1,6 +1,6 @@
 % network
 
-# Show info of network
+# Show information of the network
 ifconfig
 
 # Check the availability of the resource
@@ -8,3 +8,12 @@ ping <ip_domain>
 
 # Checks a resource either by IP address or domain and displays it in the terminal
 curl <ip_domain>
+
+# Download a resource either by IP address or domain
+wget <ip_domain>
+
+# Show package route to an IP or domain
+traceroute <ip_domain>
+
+# Show the network interfaces and their state.
+netstat -i
