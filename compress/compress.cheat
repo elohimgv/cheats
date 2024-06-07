@@ -1,1 +1,7 @@
 % compress
+
+# Compress files 
+tar -czvf <file_name>.tar.gz <directory__name>
+
+# Decompress files
+tar -xzvf <file_name>.tar.gz <directory__name>
