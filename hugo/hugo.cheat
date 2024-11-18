@@ -1,0 +1,31 @@
+% hugo
+
+# Install hugo on Linux and Mac
+brew install hugo
+
+# Install hugo extended version
+brew install hugo-extendend
+
+# Hugo version
+hugo version
+
+# Create a new site
+hugo new site <mySite>
+
+# Add content to site
+hugo new <contact.md>
+
+# Launch server
+hugo server
+
+# Create more content
+hugo new posts/<my_posts.md>
+
+# Show status draft files
+hugo server -D
+
+# To generate every site static file
+hugo
+
+
+
